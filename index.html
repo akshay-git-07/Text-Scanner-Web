@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <title>Image To Text</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script  src = "js/tesseract.min.js" ></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="overlay">
+            <h1>Text Scanner</h1>
+        </div>
+    </div>
+    <div class="scanner">
+        <section id="inputSection">
+            <div class="language">
+                <p class="title">Select the language</p>
+                <select name="langs" id="language" onchange="selectLanguage()">
+                    <option value="eng">English</option>
+                    <option value="ben">Bengali</option>
+                    <option value="hin">Hindi</option>
+                </select>
+            </div>
+            <div class="img">
+                <p class="title">Select an image</p>
+                <img id="imageBox" src="#" alt="Image">
+                <input type="file" id="inputFile" accept="image/*" 
+                onchange="pickFile()">
+            </div>
+        </section>
+        <section id="scnBtn">
+            <button id="scanBtn" onclick="scanText()">Scan</button>
+        </section>
+        <section id="result">
+            <p class="title">Scanned Text</p>
+            <p id="output"></p>
+        </section>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(6, 3, 44, 0.918);
+}
+
+.banner{
+    background-image: url('../images/banner1.jpg');
+    background-position: center;
+    min-height: 150px;
+}
+
+.banner .overlay{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1{
+    text-align: center;
+    color: rgb(6, 247, 135);
+    font-size: 3rem;
+}
+
+.scanner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputSection{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+.title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#inputSection .language select{
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#inputSection .img{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#inputSection .img img{
+    margin-top: 10px;
+    height: 300px;
+    width: 90%;
+}
+
+#inputSection .img input{
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#scnBtn{
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+#scnBtn button{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    background: rgba(6, 3, 44, 0.918);
+    margin-top: 10px;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#scnBtn button:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+#result{
+    /* min-height: 40%; */
+    margin-right: 20px;
+    height: 400px;
+    width: 45%;
+}
+
+#result #output{
+    margin-top: 20px;
+    border: #fff solid 2px;
+    color: #fff;
+    height: 350px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+@media (max-width: 991px)
+{
+    .scanner{
+        flex-direction: column;
+    }
+    #inputSection{
+        width: 80%;
+    }
+    #inputSection .img{
+        width: 100%;
+    }
+    #inputSection .img img{
+        width: 100%;
+        height: 400px;
+    }
+    #result{
+        width: 80%;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
